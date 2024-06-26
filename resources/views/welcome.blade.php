@@ -24,32 +24,25 @@
         style="background: url(/admin/img/svg/pattern-1.svg) no-repeat center bottom fixed; background-size: cover;">
         <div
             class="container py-4 py-lg-5 my-lg-5 px-4 px-sm-0 text-white d-flex align-items-center justify-content-center">
-            <form id="js-login" role="form" class="text-center text-white mb-5 pb-5"
-                action="/intel_analytics_dashboard">
+            <div class="text-center text-white mb-5 pb-5">
                 <div class="py-3">
-                    <img src="/admin/img/demo/avatars/avatar-admin-lg.png"
-                        class="img-responsive rounded-circle img-thumbnail" alt="thumbnail">
-                </div>
-                <div class="form-group">
-                    <h3>
-                        Dr. Codex Lantern
-                        <small>
-                            drlantern@gotbootstrap.com
-                        </small>
-                    </h3>
-                    <p class="text-white opacity-50">Enter password to unlock screen</p>
-                    <div class="input-group input-group-lg">
-                        <input type="text" class="form-control" placeholder="Password">
-                        <div class="input-group-append">
-                            <button class="btn btn-success shadow-0" type="button" id="button-addon5"><i
-                                    class="fal fa-key"></i></button>
-                        </div>
+                    <div class='icon-stack display-1 flex-shrink-0 d-block m-auto'>
+                        <i class="fal fa-circle icon-stack-4x opacity-100 color-primary-400"></i>
+                        <i class="fas fa-graduation-cap icon-stack-1x opacity-100 color-primary-500"></i>
                     </div>
                 </div>
+                <h2 class="fs-xxl fw-500 mt-4 text-white text-center">
+                    LAPORAN CAPAIAN PEMBELAJARAN SISWA
+                    <small class="h3 fw-300 mt-3 mb-5 text-white opacity-70 hidden-sm-down">
+                        <strong>SMKN 1 KADIPATEN</strong>
+                    </small>
+                </h2>
+                <p class="text-white opacity-50">Enter password to unlock screen</p>
                 <div class="text-center">
                     <a href="/page_auth_login_alt" class="text-white opacity-90">Not Dr. Codex Lantern ?</a>
                 </div>
-            </form>
+            </div>
+
             <div class="position-absolute pos-bottom pos-left pos-right p-3 text-center text-white">
                 {{ $profileApp->app_tahun ?? '' }} © {{ $profileApp->app_nama ?? '' }} by&nbsp;<a
                     href='https://www.gotbootstrap.com' class='text-white opacity-40 fw-500' title='gotbootstrap.com'
