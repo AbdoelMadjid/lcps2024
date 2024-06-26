@@ -58,13 +58,8 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 @csrf
                 <div class="form-group">
                     <label class="form-label" for="username">Username</label>
-
-                    {{-- <x-text-input id="email" class="block mt-1 w-full" type="email" name="email"
-                        :value="old('email')" required autofocus autocomplete="username" />
-                    <x-input-error :messages="$errors->get('email')" class="mt-2" /> --}}
-
                     <input type="email" id="email" name="email" class="form-control"
-                        placeholder="your id or email" value="old('email')" required autofocus autocomplete="username">
+                        placeholder="your id or email" required autofocus autocomplete="username">
                     <span class="help-block">
                         Your unique username to app
                     </span>
@@ -72,32 +67,37 @@ License: You must have a valid license purchased only from wrapbootstrap.com (li
                 </div>
                 <div class="form-group">
                     <label class="form-label" for="password">Password</label>
-                    <input type="password" id="password" class="form-control" placeholder="password"
-                        value="password123">
+                    <input type="password" id="password" class="form-control" placeholder="password" name="password"
+                        required autocomplete="current-password">
                     <span class="help-block">
                         Your password
                     </span>
+                    <x-input-error :messages="$errors->get('password')" class="mt-2" />
                 </div>
                 <div class="form-group text-left">
                     <div class="custom-control custom-checkbox">
-                        <input type="checkbox" class="custom-control-input" id="rememberme">
-                        <label class="custom-control-label" for="rememberme"> Remember me for the next 30 days</label>
+                        <input type="checkbox" class="custom-control-input" id="remember_me" name="remember">
+                        <label class="custom-control-label" for="remember_me"> Remember me for the next 30 days</label>
                     </div>
                 </div>
                 <button type="submit" class="btn btn-default float-right">Secure login</button>
             </form>
         </div>
         <div class="blankpage-footer text-center">
-            <a href="/page_auth_forget"><strong>Recover Password</strong></a> | <a
-                href="/page_auth_register"><strong>Register
-                    Account</strong></a>
+            @if (Route::has('password.request'))
+                <a href="{{ route('password.request') }}" class="btn-link text-white">
+                    {{ __('Forgot your password?') }}
+                </a>
+            @endif |
+            @if (Route::has('register'))
+                <a href="{{ route('register') }}" class="btn-link text-white">Register</a>
+            @endif
         </div>
     </div>
     <div class="login-footer p-2">
         <div class="row">
             <div class="col col-sm-12 text-center">
-                <i><strong>System Message:</strong> You were logged out from 198.164.246.1 on Saturday, March, 2017 at
-                    10.56AM</i>
+                <i>Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</i>
             </div>
         </div>
     </div>
