@@ -45,7 +45,7 @@ composer dump-autoload
 ```console
  php artisan optimize:clear
 ```
- # or
+or
 ```console 
  php artisan config:clear
 ```
