@@ -56,14 +56,10 @@ php artisan storage:link
 ```
 
 11. Run `php artisan serve` to running your app in browser
-```console
-php artisan migrate --seed
-```
 
 _After creating the new permissions use the following commands to update cashed permissions (optional)._
 
 `php artisan cache:forget spatie.permission.cache`
-
 
 
 ## License
