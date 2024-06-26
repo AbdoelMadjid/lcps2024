@@ -57,7 +57,10 @@ or
 php artisan storage:link
 ```
 
-11. Run `php artisan serve` to running your app in browser
+11. Run `npm install`
+12. Run `npm run build`
+
+13. Run `php artisan serve` to running your app in browser
 
 _After creating the new permissions use the following commands to update cashed permissions (optional)._
 
