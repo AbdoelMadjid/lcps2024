@@ -34,8 +34,8 @@ DB_PASSWORD=
 ```
 
 7. Run `php artisan key:generate`
-8. Dum autoload 
-
+8. Run
+   
 ```console
 composer dump-autoload
 ```
