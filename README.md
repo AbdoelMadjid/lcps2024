@@ -42,16 +42,18 @@ composer dump-autoload
 
 8. Clear your config cache
 
-```
+```console
  php artisan optimize:clear
+```
  # or
+```console 
  php artisan config:clear
 ```
 
 9. Run `php artisan migrate --seed`
 10. To create a link from the storage directory, run the following command from the project root:
 
-```
+```console 
 php artisan storage:link
 ```
 
@@ -59,8 +61,9 @@ php artisan storage:link
 
 _After creating the new permissions use the following commands to update cashed permissions (optional)._
 
-`php artisan cache:forget spatie.permission.cache`
-
+```console
+php artisan cache:forget spatie.permission.cache
+```
 
 ## License
 
